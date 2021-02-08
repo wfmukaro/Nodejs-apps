@@ -1,0 +1,30 @@
+<%- include('partial/header'); %> 
+
+<div class="container">
+    <div class="row pt-5">
+        <a href="/" class="btn btn-primary">Back</a>
+    </div>
+</div>
+<div class="container" style="height: 80vh;">
+    <div class="row justify-content-center h-100 d-flex align-items-center">
+        <div class="col text-center">
+            <form method="POST" action="/formaction">
+                <div class="form-group">
+                  <label >Client name</label>
+                  <input type="text" name="userNameInput" class="form-control"placeholder="Enter Client name">
+                </div>
+                <div class="form-group">
+                    <label >Client car</label>
+                    <input type="text" name="userCarInput" class="form-control"placeholder="Enter Client car">
+                  </div>
+                  <div class="form-group">
+                    <label >Client fee</label>
+                    <input type="text"  name="userFeeInput" class="form-control"placeholder="Enter Client fee">
+                  </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>
+
+<%- include('partial/footer'); %>
