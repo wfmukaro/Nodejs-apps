@@ -1,0 +1,13 @@
+{
+  "name": "express-app-files",
+  "version": "0.0.0",
+  "description": "ExpressAppFiles",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
