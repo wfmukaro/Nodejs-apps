@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+ 
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #Wrap{
+            display:flex;
+        }
+        h1{
+            text-align: center;
+        }
+        #Form{
+            margin-left: 5%;
+            background-color: aqua;
+            padding: 12px 12px 12px 12px;
+            border-radius: 12px;
+        }
+
+ 
+
+        #Table{
+            margin-left: 10%;
+            padding: 12px 12px 12px 12px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Employee Data tracker</h1>
+    <section id="Wrap">
+        <section id="Form">
+            <h3>Form Data</h3>
+            <form action="addEmployee" method="post">
+                <input type="text" placeholder="Name: Peter" name="name" /><br /><br />
+                <input type="text" placeholder="Surname: Ncube" name="surname" /><br /><br />
+                <input type="number" placeholder="Age: 20" name="age" /><br /><br />
+                <input type="text" placeholder="Job Title: web manager" name="JobTitle" /><br /><br />
+                <input type="number" placeholder="Salary: 2000" name="salary" /><br /><br />
+                <input id="t1" type="submit" value="add Employee" />
+            </form>
+        </section>
+        <section id="Table">
+            <h3>Employee Data</h3>
+            <table border="1">
+                <tr><th>Name</th><th>Surname</th><th>Age</th><th>Job Title</th><th>Salary</th></tr>
+                <%for (var i = 0; i < employee.length; i++) {%>
+                <tr><td><%=employee[i].name %></td><td><%= employee[i].surname %></td><td><%= employee[i].age %></td><td><%= employee[i].JobTitle%></td><td><%=employee[i].salary%> </td></tr>
+                <%}%>
+            </table>
+        </section>
+    </section>
+    
+</body>
+</html>
