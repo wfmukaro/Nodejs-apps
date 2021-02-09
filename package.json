@@ -1,0 +1,12 @@
+{
+  "name": "mongodbpractice",
+  "version": "0.0.0",
+  "description": "mongodbpractice",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "mongodb": "^3.6.3"
+  }
+}
