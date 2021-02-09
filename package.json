@@ -1,0 +1,15 @@
+{
+  "name": "online-bog",
+  "version": "0.0.0",
+  "description": "onlineBog",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3",
+    "sqlite3": "^5.0.0"
+  }
+}

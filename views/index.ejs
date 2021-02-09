@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #form{
+           width:50%;
+           margin-top:60px;
+           background-color:cadetblue;
+           border:2px solid blue;
+           border-radius:5px;
+           flex:1;
+           margin:60px;
+        }
+        form{
+            height:100%;
+        }
+        input,textarea{
+            width:70%;
+            margin-top:20px;
+            margin-left:60px;
+        }
+        h1{
+            text-align:center;
+        }
+        #wrapper{
+        display:flex;
+        }
+        #complblog{
+        margin-top:30px;
+        background-color:burlywood;
+        border:2px solid black;
+        width:100%;
+        }
+        .name{
+        color:blue;
+        }
+        .date{
+        color:aliceblue;
+        font-size:small;
+        font-style:italic
+        }
+        .topic{
+        font-weight:bolder
+        }
+        #blogs {
+            flex: 1;
+            margin:60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Development 252 Discussion Blog</h1>
+    <section id="wrapper">
+        <section id="form">
+            <form action="blogData" method="post">
+                <input type="text" placeholder="Name: Peter Ncube" name="name" /><br />
+                <input type="text" placeholder="Topic: Express" name="topic" /><br />
+                <textarea name="blog" placeholder="Write your views here" rows="15"></textarea><br />
+                <input type="submit" value="post blog" />
+            </form>
+        </section>
+        <section id="blogs">
+            <h3>Blogs</h3>
+            <% rows.sort((a, b) => b.date-a.date)%>
+            <% for (var i = 0; i < rows.length; i++) {%>
+            <section id="complblog">
+                <div class="name"><%= "posted by: "+rows[i].fname %></div>
+                <div class="date"><%= "posted on: "+Date(rows[i].date) %></div>
+                <div class="topic"><%= "Topic: "+rows[i].topic %></div>
+                <div class="post"><%= rows[i].post %></div>
+
+            </section>
+
+            <%}%>
+        </section>
+    </section>
+</body>
+</html>
